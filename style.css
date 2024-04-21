@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #3c96ed;
+}
+
+body{
+    background-color: #fffdfd;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.wrapper{
+    height: 100vh;
+    
+}
+
+#container{
+    margin: 0 auto;/*para centralizar o conteudo*/
+    min-height: 100%;
+    width: 800px;
+    display: flex;
+    align-items: center;/*alinhar verticalmente*/
+    
+}
+
+.column{
+    flex-grow: 1;/*para as colunas terem o mesmo espaço*/
+    width: 50%;
+
+}
+
+.left{
+    background-image: url('./assets/instagram3.jpg');
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    margin-bottom: 50px;
+}
+
+.right{   
+    padding-left: 20px;
+}
+
+.loginPanel{
+    background-color: #fff;
+    border: solid 1px #e6e6e6;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.logoImg{
+    width: 175px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;/*alinhado verticalmente*/
+    justify-content: center; /*alinhado horizontalmente*/
+}
+
+input[type="password"], input[type="text"]{
+    background-color: #ffffff;
+    border:  1px solid rgb(236,234,234);
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 320px;
+    color: #000000;
+}
+
+input[type="password"]::placeholder, input[type="text"]::placeholder{
+    color: rgb(165,164,164);
+}
+
+input[type="password"]:focus, input[type="text"]:focus{
+    border: 1px solid #a1a1a1;
+    outline: 0;/*para tirar a borda quando clicar no input*/
+
+}
+
+input[type="submit"]{
+    width: 320px;
+    margin-top: 10px;
+    height: 30px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #3c96ed;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+
+.infobox{
+    background-color: #ffffff;
+    height: 60px;
+    border: 1px solid rgb(236,234,234);
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infobox p , a{
+    font-weight: bold;
+    user-select: none;/*para o usuario não selecionar o texto*/
+}
+
+.getAppPanel{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;   
+}
+
+.appButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appButtons img{
+    height: 40px;
+    padding: 0 4px;
+}
+
+.footerInner{
+    text-align: center;
+    height: 50px;
+    margin-top: -50px;
+    
+}
+
+footer a{
+    color: #000;
+    
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.textSmall{
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+    margin-top: 5px;
+    padding-left: 20px;
+    /*display: inline-block;/*colocar o elemento na mesma linda do elemento anterior*/
+    
+}
+
+/*PAGINA SIGUP*/
+#containerSigUp{
+    margin: 0 auto;/*para centralizar o conteudo*/
+    min-height: 100%;
+    width: 400px;
+    display: flex;
+    align-items: center;/*alinhar verticalmente*/
+}
+
+.message{
+    margin: 10px 70px;
+    
+}
+
+.message span{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #8e8e8e;
+}
+
+.ctaButton{
+    width: 320px;
+    margin: 10px 0;
+    height: 35px;
+    background-color: #0095f6;
+    color: #ffffff;
+    border: 0;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.divisorContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+
+}
+
+.line{
+    height: 1px;
+    background-color: #161616;
+    width: 35%;
+
+}
+
+.divisorTag{
+    font-weight: bold;
+    padding: 0 2.5%;
+    color: #8e8e8e;
+    user-select: none;
+}
+
+/*FIM PAGINA SIGNUP*/
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 850px){/*largura maxima*/
+    .left{
+        display: none;/*ocultando da tela*/
+
+    }
+
+    #container{
+        width: 70%;
+    }
+
+    .right{
+        padding-left: 0;
+    }
+
+    footer{
+        margin-top: -90px;
+    }
+}
+
+@media (max-width: 560px){/*largura maxima*/
+    .left{
+        display: none;/*ocultando da tela*/
+
+    }
+
+    #container{
+        width: 90%;
+    }
+
+    .right{
+        padding-left: 0;
+    }
+
+    #containerSigUp{
+        width: 90%;
+    }
+
+    input[type='text'], input[type='password'], input[type='submit']{
+        width: 85%;
+    }
+
+    .ctaButton{
+        width: 85%;
+    }
+
+    .message{
+        margin: 10px 25px;
+    }
+
+    footer{
+        margin-top: -100px;
+    }
+}
